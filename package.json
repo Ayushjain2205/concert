@@ -9,10 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@thirdweb-dev/react": "^3.14.40",
+    "@thirdweb-dev/sdk": "^3.10.59",
     "@types/node": "20.5.9",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
     "autoprefixer": "10.4.15",
+    "ethers": "^5.7.2",
     "file-saver": "^2.0.5",
     "multer": "^1.4.5-lts.1",
     "next": "13.4.19",
