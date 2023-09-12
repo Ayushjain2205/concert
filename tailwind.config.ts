@@ -6,9 +6,18 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  theme: {
-    extend: {},
-  },
+  themes: [
+    {
+      royale: {
+        primary: "#9381FF",
+        secondary: "#B8B8FF",
+        accent: "#F8F7FE",
+        neutral: "#3d4451",
+        background: "#fff",
+        "base-100": "#ffffff",
+      },
+    },
+  ],
   plugins: [require("daisyui")],
 };
 export default config;
