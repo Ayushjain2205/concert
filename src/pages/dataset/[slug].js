@@ -22,7 +22,10 @@ const DataSetPage = () => {
             </strong>
           </div>
           <div className="mt-4 sm:flex sm:items-center sm:gap-2">
-            <div className="flex items-center gap-[8px] text-[#9381FF]">
+            <div
+              data-tip="Users"
+              className="flex items-center tooltip gap-[8px] text-[#9381FF]"
+            >
               <i class="fa-solid fa-users"></i>
               <span>200</span>
             </div>
@@ -31,7 +34,10 @@ const DataSetPage = () => {
               &middot;
             </span>
 
-            <div className="flex items-center gap-[8px] text-[#9381FF]">
+            <div
+              data-tip="Files"
+              className="flex tooltip items-center gap-[8px] text-[#9381FF]"
+            >
               <i class="fa-solid fa-file"></i>
               <span>200</span>
             </div>
@@ -40,7 +46,10 @@ const DataSetPage = () => {
               &middot;
             </span>
 
-            <div className="flex items-center gap-[8px] text-[#9381FF]">
+            <div
+              data-tip="Forks"
+              className="flex tooltip items-center gap-[8px] text-[#9381FF]"
+            >
               <i class="fa-solid fa-code-fork"></i>
               <span>200</span>
             </div>
