@@ -36,7 +36,7 @@ const SideBar = () => {
                   <input
                     type="checkbox"
                     id="image"
-                    className="h-5 w-5 rounded border-gray-300"
+                    className="h-5 w-5 rounded border-gray-300 checkbox checkbox-primary"
                   />
 
                   <span className="text-sm font-medium text-gray-700">
@@ -50,7 +50,7 @@ const SideBar = () => {
                   <input
                     type="checkbox"
                     id="csv"
-                    className="h-5 w-5 rounded border-gray-300"
+                    className="h-5 w-5 rounded border-gray-300 checkbox checkbox-primary"
                   />
 
                   <span className="text-sm font-medium text-gray-700">CSV</span>
@@ -62,7 +62,7 @@ const SideBar = () => {
                   <input
                     type="checkbox"
                     id="pdf"
-                    className="h-5 w-5 rounded border-gray-300"
+                    className="h-5 w-5 rounded border-gray-300 checkbox checkbox-primary"
                   />
 
                   <span className="text-sm font-medium text-gray-700">PDF</span>
