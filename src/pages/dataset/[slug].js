@@ -61,7 +61,7 @@ const DataSetPage = () => {
         </button>
       </div>
       <div className="rounded-xl p-4 ring ring-indigo-50 ">
-        <Tabs.Root className="flex flex-col w-[1000px]" defaultValue="tab1">
+        <Tabs.Root className="flex flex-col w-[1100px]" defaultValue="tab1">
           <Tabs.List
             className="shrink-0 flex border-b border-[#3d445110]"
             aria-label="Manage your account"
@@ -84,9 +84,16 @@ const DataSetPage = () => {
             >
               Contribute
             </Tabs.Trigger>
+
             <Tabs.Trigger
               className="focus:outline-none bg-white px-5 h-[45px] flex-1 flex items-center justify-center text-[15px] leading-none text-mauve11 select-none first:rounded-tl-md last:rounded-tr-md hover:text-violet11 data-[state=active]:text-[#9381FF] data-[state=active]:shadow-[inset_0_-1px_0_0,0_1px_0_0] data-[state=active]:shadow-current outline-none  cursor-pointer focus:outline-none"
               value="tab4"
+            >
+              Code
+            </Tabs.Trigger>
+            <Tabs.Trigger
+              className="focus:outline-none bg-white px-5 h-[45px] flex-1 flex items-center justify-center text-[15px] leading-none text-mauve11 select-none first:rounded-tl-md last:rounded-tr-md hover:text-violet11 data-[state=active]:text-[#9381FF] data-[state=active]:shadow-[inset_0_-1px_0_0,0_1px_0_0] data-[state=active]:shadow-current outline-none  cursor-pointer focus:outline-none"
+              value="tab5"
             >
               Stats
             </Tabs.Trigger>
@@ -112,6 +119,12 @@ const DataSetPage = () => {
           <Tabs.Content
             className="grow p-5 bg-white rounded-b-md outline-none focus:shadow-[0_0_0_2px] focus:shadow-black"
             value="tab4"
+          >
+            <div> Code </div>
+          </Tabs.Content>
+          <Tabs.Content
+            className="grow p-5 bg-white rounded-b-md outline-none focus:shadow-[0_0_0_2px] focus:shadow-black"
+            value="tab5"
           >
             <div> Stats </div>
           </Tabs.Content>
