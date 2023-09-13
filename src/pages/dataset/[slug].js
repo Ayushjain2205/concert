@@ -1,8 +1,9 @@
 import React from "react";
+import * as Tabs from "@radix-ui/react-tabs";
 
 const DataSetPage = () => {
   return (
-    <div className="flex flex-row gap-[40px]">
+    <div className="flex flex-row gap-[60px]">
       <div className="flex flex-col gap-[50px]">
         <div className="flex flex-col gap-[10px] w-[350px] rounded-xl p-4 ring ring-indigo-50 bg-[#B8B8FF40]">
           <div>
@@ -50,7 +51,63 @@ const DataSetPage = () => {
           <img src="/icons/royale-coin.svg" className="h-[32px]" alt="" />
         </button>
       </div>
-      <div>mAIN</div>
+      <div className="rounded-xl p-4 ring ring-indigo-50 ">
+        <Tabs.Root className="flex flex-col w-[1000px]" defaultValue="tab1">
+          <Tabs.List
+            className="shrink-0 flex border-b border-mauve6"
+            aria-label="Manage your account"
+          >
+            <Tabs.Trigger
+              className="focus:outline-none bg-white px-5 h-[45px] flex-1 flex items-center justify-center text-[15px] leading-none text-mauve11 select-none first:rounded-tl-md last:rounded-tr-md hover:text-violet11 data-[state=active]:text-[#9381FF] data-[state=active]:shadow-[inset_0_-1px_0_0,0_1px_0_0] data-[state=active]:shadow-current outline-none cursor-default focus:outline-none"
+              value="tab1"
+            >
+              View Data
+            </Tabs.Trigger>
+            <Tabs.Trigger
+              className="focus:outline-none bg-white px-5 h-[45px] flex-1 flex items-center justify-center text-[15px] leading-none text-mauve11 select-none first:rounded-tl-md last:rounded-tr-md hover:text-violet11 data-[state=active]:text-[#9381FF] data-[state=active]:shadow-[inset_0_-1px_0_0,0_1px_0_0] data-[state=active]:shadow-current outline-none cursor-default focus:outline-none"
+              value="tab2"
+            >
+              AI Actions
+            </Tabs.Trigger>
+            <Tabs.Trigger
+              className="focus:outline-none bg-white px-5 h-[45px] flex-1 flex items-center justify-center text-[15px] leading-none text-mauve11 select-none first:rounded-tl-md last:rounded-tr-md hover:text-violet11 data-[state=active]:text-[#9381FF] data-[state=active]:shadow-[inset_0_-1px_0_0,0_1px_0_0] data-[state=active]:shadow-current outline-none cursor-default focus:outline-none"
+              value="tab3"
+            >
+              Contribute
+            </Tabs.Trigger>
+            <Tabs.Trigger
+              className="focus:outline-none bg-white px-5 h-[45px] flex-1 flex items-center justify-center text-[15px] leading-none text-mauve11 select-none first:rounded-tl-md last:rounded-tr-md hover:text-violet11 data-[state=active]:text-[#9381FF] data-[state=active]:shadow-[inset_0_-1px_0_0,0_1px_0_0] data-[state=active]:shadow-current outline-none cursor-default focus:outline-none"
+              value="tab4"
+            >
+              Stats
+            </Tabs.Trigger>
+          </Tabs.List>
+          <Tabs.Content
+            className="grow p-5 bg-white rounded-b-md outline-none"
+            value="tab1"
+          >
+            <div> View Data</div>
+          </Tabs.Content>
+          <Tabs.Content
+            className="grow p-5 bg-white rounded-b-md outline-none focus:shadow-[0_0_0_2px] focus:shadow-black"
+            value="tab2"
+          >
+            <div> AI Actions</div>
+          </Tabs.Content>
+          <Tabs.Content
+            className="grow p-5 bg-white rounded-b-md outline-none"
+            value="tab3"
+          >
+            <div>Contribute</div>
+          </Tabs.Content>
+          <Tabs.Content
+            className="grow p-5 bg-white rounded-b-md outline-none focus:shadow-[0_0_0_2px] focus:shadow-black"
+            value="tab4"
+          >
+            <div> Stats </div>
+          </Tabs.Content>
+        </Tabs.Root>
+      </div>
     </div>
   );
 };
