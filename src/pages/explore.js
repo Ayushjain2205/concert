@@ -9,7 +9,10 @@ const Explore = () => {
       <SearchBar />
       <div className="flex flex-row w-full mt-[30px] gap-[60px]">
         <SideBar />
-        <div className="flex flex-col">
+        <div className="flex flex-col gap-[25px]">
+          <DatasetCard />
+          <DatasetCard />
+          <DatasetCard />
           <DatasetCard />
         </div>
       </div>
