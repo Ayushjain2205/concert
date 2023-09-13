@@ -1,15 +1,19 @@
 import React from "react";
 import { ConnectWallet, useAddress } from "@thirdweb-dev/react";
+import Link from "next/link";
 
 const Navbar = () => {
   const address = useAddress();
   return (
     <div className="navbar bg-base-100">
       <div className="flex-1">
-        <a className="btn btn-ghost normal-case text-xl text-primary hover:bg-white font-bold">
+        <Link
+          href="/"
+          className="btn btn-ghost normal-case text-xl text-primary hover:bg-white font-bold"
+        >
           <img src="/data-royale-logo.svg" className="h-[40px]" alt="" />
           Data Royale
-        </a>
+        </Link>
       </div>
       <div className="flex-none gap-[40px] mx-[20px]">
         {address && (
