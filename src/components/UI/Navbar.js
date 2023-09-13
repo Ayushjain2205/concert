@@ -18,7 +18,7 @@ const Navbar = () => {
       <div className="flex-none gap-[40px] mx-[20px]">
         {address && (
           <div className="flex flex-row gap-[8px] items-center">
-            <span className="font-bold text-[20px]">50</span>
+            <span className="font-bold text-[20px] text-[#9381FF]">50</span>
             <img src="/icons/royale-coin.svg" className="w-[35px]" alt="" />
           </div>
         )}
