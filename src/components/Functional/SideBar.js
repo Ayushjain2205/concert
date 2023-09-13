@@ -2,7 +2,7 @@ import React from "react";
 
 const SideBar = () => {
   return (
-    <div className="w-[400px]">
+    <div className="w-[350px]">
       <div className="space-y-2">
         <details className="overflow-hidden rounded-[20px] border-2 border-[#B8B8FF] [&_summary::-webkit-details-marker]:hidden">
           <summary className="flex cursor-pointer items-center justify-between gap-2 bg-white p-4 text-gray-900 transition">
@@ -26,18 +26,7 @@ const SideBar = () => {
             </span>
           </summary>
 
-          <div className="border-t border-gray-200 bg-white">
-            <header className="flex items-center justify-between p-4">
-              <span className="text-sm text-gray-700"> 0 Selected </span>
-
-              <button
-                type="button"
-                className="text-sm text-gray-900 underline underline-offset-4"
-              >
-                Reset
-              </button>
-            </header>
-
+          <div className="border-t border-[#B8B8FF] bg-white">
             <ul className="space-y-1 border-t border-gray-200 p-4">
               <li>
                 <label
@@ -115,21 +104,7 @@ const SideBar = () => {
             </span>
           </summary>
 
-          <div className="border-t border-gray-200 bg-white">
-            <header className="flex items-center justify-between p-4">
-              <span className="text-sm text-gray-700">
-                {" "}
-                The highest price is $600{" "}
-              </span>
-
-              <button
-                type="button"
-                className="text-sm text-gray-900 underline underline-offset-4"
-              >
-                Reset
-              </button>
-            </header>
-
+          <div className="border-t border-[#B8B8FF] bg-white">
             <div className="border-t border-gray-200 p-4">
               <div className="flex justify-between gap-4">
                 <label
