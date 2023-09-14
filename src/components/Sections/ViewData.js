@@ -6,20 +6,19 @@ const ViewData = () => {
 
   const data = [
     {
-      avatar: "/file-icons/file-icon-1.svg",
-      name: "Hart Hagerty",
-      country: "United States",
-      company: "Zemlak, Daniel and Leannon",
-      job: "Desktop Support Technician",
-      color: "Purple",
+      filename: "name.pdf",
+      contributor: "0xCafa93E9985793E2475bD58B9215c21Dbd421fD0",
+      size: "108KB",
     },
     {
-      avatar: "/file-icons/file-icon-2.svg",
-      name: "Brice Swyre",
-      country: "China",
-      company: "Carroll Group",
-      job: "Tax Accountant",
-      color: "Red",
+      filename: "name.pdf",
+      contributor: "0xCafa93E9985793E2475bD58B9215c21Dbd421fD0",
+      size: "108KB",
+    },
+    {
+      filename: "name.pdf",
+      contributor: "0xCafa93E9985793E2475bD58B9215c21Dbd421fD0",
+      size: "108KB",
     },
   ];
 
@@ -77,7 +76,7 @@ const ViewData = () => {
             </tr>
           </thead>
           <tbody>
-            {data.map((person, index) => (
+            {data.map((file, index) => (
               <tr
                 key={index}
                 className={selectedRows.includes(index) ? "bg-[#B8B8FF50]" : ""}
@@ -97,22 +96,20 @@ const ViewData = () => {
                     <div className="avatar">
                       <div className="mask mask-squircle w-12 h-12">
                         <img
-                          src={person.avatar}
-                          alt={`File name - ${person.name}`}
+                          src={`/file-icons/file-icon-${(index % 10) + 1}.svg`}
+                          alt={`File icon for ${file.filename}`}
                         />
                       </div>
                     </div>
                     <div>
-                      <div className="font-bold">{person.name}</div>
-                      <div className="text-sm opacity-50">{person.country}</div>
+                      <div className="font-bold">{file.filename}</div>
+                      <div className="text-sm opacity-50">{file.size}</div>
                     </div>
                   </div>
                 </td>
                 <td>
-                  {person.company}
-                  <br />
                   <span className="badge badge-ghost badge-sm">
-                    {person.job}
+                    {file.contributor}
                   </span>
                 </td>
                 <td>
