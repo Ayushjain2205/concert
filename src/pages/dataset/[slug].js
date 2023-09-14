@@ -1,5 +1,6 @@
 import React from "react";
 import * as Tabs from "@radix-ui/react-tabs";
+import ViewData from "../../components/Sections/ViewData";
 
 const DataSetPage = () => {
   return (
@@ -102,7 +103,7 @@ const DataSetPage = () => {
             className="grow p-5 bg-white rounded-b-md outline-none"
             value="tab1"
           >
-            <div> View Data</div>
+            <ViewData />
           </Tabs.Content>
           <Tabs.Content
             className="grow p-5 bg-white rounded-b-md outline-none focus:shadow-[0_0_0_2px] focus:shadow-black"
