@@ -115,7 +115,7 @@ const ViewData = () => {
               <th>Contributor</th>
               <th></th>
               <th>
-                {selectAll && (
+                {selectedRows.length > 1 && (
                   <button className="btn btn-ghost btn-xs">Download </button>
                 )}
               </th>
