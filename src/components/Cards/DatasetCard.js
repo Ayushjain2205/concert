@@ -7,7 +7,7 @@ const DatasetCard = () => {
         <img src="/icons/image.svg" className="h-[100px]" alt="" />
 
         <div>
-          <strong className="rounded-[20px] border border-indigo-500 bg-indigo-500 px-3 py-1.5 text-[10px] font-medium text-white">
+          <strong className="rounded-xl border border-indigo-500 bg-indigo-500 px-3 py-1.5 text-[10px] font-medium text-white">
             Category
           </strong>
 

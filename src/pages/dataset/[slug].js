@@ -20,7 +20,7 @@ const DataSetPage = () => {
             aliquid fuga. Sint.
           </p>
           <div>
-            <strong className="rounded-[20px] border border-indigo-500 bg-indigo-500 px-3 py-1.5 text-[10px] font-medium text-white">
+            <strong className="rounded-xl border border-indigo-500 bg-indigo-500 px-3 py-1.5 text-[10px] font-medium text-white">
               Category
             </strong>
           </div>
@@ -58,7 +58,7 @@ const DataSetPage = () => {
             </div>
           </div>
         </div>
-        <button className="btn btn-outline btn-primary rounded-[20px]">
+        <button className="btn btn-outline btn-primary rounded-xl">
           Buy with 50{" "}
           <img src="/icons/royale-coin.svg" className="h-[32px]" alt="" />
         </button>

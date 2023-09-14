@@ -4,7 +4,7 @@ const SideBar = () => {
   return (
     <div className="w-[350px]">
       <div className="space-y-2">
-        <details className="overflow-hidden rounded-[20px] border-2 border-[#B8B8FF] [&_summary::-webkit-details-marker]:hidden">
+        <details className="overflow-hidden rounded-xl border-2 border-[#B8B8FF] [&_summary::-webkit-details-marker]:hidden">
           <summary className="flex cursor-pointer items-center justify-between gap-2 bg-white p-4 text-gray-900 transition">
             <span className="text-sm font-medium"> Category </span>
 
@@ -72,7 +72,7 @@ const SideBar = () => {
           </div>
         </details>
 
-        <details className="overflow-hidden rounded-[20px] border-2 border-[#B8B8FF] [&_summary::-webkit-details-marker]:hidden">
+        <details className="overflow-hidden rounded-xl border-2 border-[#B8B8FF] [&_summary::-webkit-details-marker]:hidden">
           <summary className="flex cursor-pointer items-center justify-between gap-2 bg-white p-4 text-gray-900 transition">
             <span className="text-sm font-medium"> Price </span>
 
@@ -136,7 +136,7 @@ const SideBar = () => {
           </div>
         </details>
 
-        <details className="overflow-hidden rounded-[20px] border-2 border-[#B8B8FF] [&_summary::-webkit-details-marker]:hidden">
+        <details className="overflow-hidden rounded-xl border-2 border-[#B8B8FF] [&_summary::-webkit-details-marker]:hidden">
           <summary className="flex cursor-pointer items-center justify-between gap-2 bg-white p-4 text-gray-900 transition">
             <span className="text-sm font-medium"> Numbers </span>
 
