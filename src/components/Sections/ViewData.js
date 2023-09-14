@@ -116,9 +116,14 @@ const ViewData = () => {
               <th></th>
               <th>
                 {selectedRows.length > 1 && (
-                  <button className="btn btn-ghost btn-xs">Download </button>
+                  <button className="btn btn-ghost btn-xs">
+                    <i className="fa-solid fa-download"></i>
+                  </button>
                 )}
               </th>
+              <th></th>
+              <th></th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
@@ -162,7 +167,9 @@ const ViewData = () => {
                   <ViewFile />
                 </td>
                 <th>
-                  <button className="btn btn-ghost btn-xs">Download</button>
+                  <button className="btn btn-ghost btn-xs">
+                    <i className="fa-solid fa-download"></i>
+                  </button>
                 </th>
               </tr>
             ))}

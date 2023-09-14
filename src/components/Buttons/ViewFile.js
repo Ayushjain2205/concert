@@ -21,7 +21,7 @@ const ViewFile = () => {
         className="btn btn-ghost btn-xs"
         onClick={() => document.getElementById("my_modal_2").showModal()}
       >
-        View
+        <i className="fa-solid fa-eye"></i>
       </button>
       <dialog id="my_modal_2" className="modal">
         <div className="modal-box">
