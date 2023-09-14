@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ViewFile from "../Buttons/ViewFile";
 
 const ViewData = () => {
   const [selectedRows, setSelectedRows] = useState([]);
@@ -113,7 +114,7 @@ const ViewData = () => {
                   </span>
                 </td>
                 <td>
-                  <button className="btn btn-ghost btn-xs">View</button>
+                  <ViewFile />
                 </td>
                 <th>
                   <button className="btn btn-ghost btn-xs">Download</button>
