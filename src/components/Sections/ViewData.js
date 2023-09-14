@@ -70,7 +70,7 @@ const ViewData = () => {
               <th></th>
               <th>
                 {selectAll && (
-                  <button className="btn btn-ghost btn-xs">Download all</button>
+                  <button className="btn btn-ghost btn-xs">Download </button>
                 )}
               </th>
             </tr>
