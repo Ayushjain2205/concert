@@ -21,6 +21,51 @@ const ViewData = () => {
       contributor: "0xCafa93E9985793E2475bD58B9215c21Dbd421fD0",
       size: "108KB",
     },
+    {
+      filename: "name.pdf",
+      contributor: "0xCafa93E9985793E2475bD58B9215c21Dbd421fD0",
+      size: "108KB",
+    },
+    {
+      filename: "name.pdf",
+      contributor: "0xCafa93E9985793E2475bD58B9215c21Dbd421fD0",
+      size: "108KB",
+    },
+    {
+      filename: "name.pdf",
+      contributor: "0xCafa93E9985793E2475bD58B9215c21Dbd421fD0",
+      size: "108KB",
+    },
+    {
+      filename: "name.pdf",
+      contributor: "0xCafa93E9985793E2475bD58B9215c21Dbd421fD0",
+      size: "108KB",
+    },
+    {
+      filename: "name.pdf",
+      contributor: "0xCafa93E9985793E2475bD58B9215c21Dbd421fD0",
+      size: "108KB",
+    },
+    {
+      filename: "name.pdf",
+      contributor: "0xCafa93E9985793E2475bD58B9215c21Dbd421fD0",
+      size: "108KB",
+    },
+    {
+      filename: "name.pdf",
+      contributor: "0xCafa93E9985793E2475bD58B9215c21Dbd421fD0",
+      size: "108KB",
+    },
+    {
+      filename: "name.pdf",
+      contributor: "0xCafa93E9985793E2475bD58B9215c21Dbd421fD0",
+      size: "108KB",
+    },
+    {
+      filename: "name.pdf",
+      contributor: "0xCafa93E9985793E2475bD58B9215c21Dbd421fD0",
+      size: "108KB",
+    },
   ];
 
   const toggleRowSelection = (index) => {
