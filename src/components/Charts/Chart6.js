@@ -1,55 +1,55 @@
 import React from "react";
-import { LineChart, Line, Tooltip, ResponsiveContainer, XAxis } from "recharts";
+import { BarChart, Bar, Tooltip, ResponsiveContainer, XAxis } from "recharts";
 
-const Chart6 = () => {
+const Chart3 = () => {
   const data = [
     {
       name: "Monday ",
-      Amount: 30,
+      Amount: 12,
     },
     {
       name: "Tuesday",
-      Amount: 32,
+      Amount: 10,
     },
     {
       name: "Wednesday",
-      Amount: 21,
+      Amount: 6,
     },
     {
       name: "Thursday",
-      Amount: 49,
+      Amount: 4,
     },
     {
       name: "Friday",
-      Amount: 28,
+      Amount: 10,
     },
     {
       name: "Saturday",
-      Amount: 18,
+      Amount: 7,
     },
     {
       name: "Sunday",
-      Amount: 43,
+      Amount: 9,
     },
   ];
   return (
     <div className="flex flex-col gap-[10px]">
-      <p>Downloads</p>
+      <p>Contributions</p>
       <div className="flex flex-row gap-[8px]">
-        <img src="/icons/downloads.svg" className="h-[42px]" alt="" />
-        <span className="font-bold text-[32px]">180</span>
+        <img src="/icons/contributions.svg" className="h-[42px]" alt="" />
+        <span className="font-bold text-[32px]">36</span>
       </div>
       <div className="h-[100px]">
         <ResponsiveContainer width="100%" height="100%">
-          <LineChart width={302} height={100} data={data}>
+          <BarChart width={302} height={100} data={data}>
             <Tooltip />
             <XAxis dataKey="name" hide={true} />
-            <Line type="monotone" dataKey="Amount" stroke="#8884d8" />
-          </LineChart>
+            <Bar type="monotone" dataKey="Amount" fill="#8884d8" />
+          </BarChart>
         </ResponsiveContainer>
       </div>
     </div>
   );
 };
 
-export default Chart6;
+export default Chart3;
