@@ -1,6 +1,7 @@
 import React from "react";
 import * as Tabs from "@radix-ui/react-tabs";
 import ViewData from "../../components/Sections/ViewData";
+import PdfAI from "../../components/Sections/AI/PdfAI";
 
 const DataSetPage = () => {
   return (
@@ -109,7 +110,7 @@ const DataSetPage = () => {
             className="grow p-5 bg-white rounded-b-md outline-none focus:shadow-[0_0_0_2px] focus:shadow-black"
             value="tab2"
           >
-            <div> AI Actions</div>
+            <PdfAI />
           </Tabs.Content>
           <Tabs.Content
             className="grow p-5 bg-white rounded-b-md outline-none"
@@ -127,7 +128,7 @@ const DataSetPage = () => {
             className="grow p-5 bg-white rounded-b-md outline-none focus:shadow-[0_0_0_2px] focus:shadow-black"
             value="tab5"
           >
-            <div> Stats </div>
+            <Stats />
           </Tabs.Content>
         </Tabs.Root>
       </div>
