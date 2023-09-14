@@ -3,6 +3,7 @@ import Chart1 from "../Charts/Chart1";
 import Chart2 from "../Charts/Chart2";
 import Chart3 from "../Charts/Chart3";
 import Chart4 from "../Charts/Chart4";
+import Chart5 from "../Charts/Charts5";
 
 const Stats = () => {
   return (
@@ -19,7 +20,9 @@ const Stats = () => {
       <div className="rounded-xl bg-white p-4 ring ring-indigo-50 w-[334px] h-[225px]">
         <Chart4 />
       </div>
-      <div className="rounded-xl bg-white p-4 ring ring-indigo-50 w-[334px] h-[225px]"></div>
+      <div className="rounded-xl bg-white p-4 ring ring-indigo-50 w-[334px] h-[225px]">
+        <Chart5 />
+      </div>
       <div className="rounded-xl bg-white p-4 ring ring-indigo-50 w-[334px] h-[225px]"></div>
     </div>
   );
