@@ -1,20 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Root, List, Trigger, Content } from "@radix-ui/react-tabs";
 import ViewData from "../../components/Sections/ViewData";
-import PdfAI from "../../components/Sections/AI/PdfAI";
 import Stats from "../../components/Sections/Stats";
 import Contribute from "../../components/Sections/Contribute";
 import Code from "../../components/Sections/Code";
-import ImageAI from "../../components/Sections/AI/ImageAI";
-import CsvAI from "../../components/Sections/AI/CsvAI";
-
-const tabsConfig = [
-  { value: "tab1", label: "View Data", content: <ViewData /> },
-  { value: "tab2", label: "AI Actions", content: <CsvAI /> },
-  { value: "tab3", label: "Contribute", content: <Contribute /> },
-  { value: "tab4", label: "Code", content: <Code /> },
-  { value: "tab5", label: "Stats", content: <Stats /> },
-];
+import AISwitch from "../../components/Sections/AISwitch";
 
 const TabTrigger = ({ value, label }) => (
   <Trigger
@@ -26,6 +16,15 @@ const TabTrigger = ({ value, label }) => (
 );
 
 const DataSetPage = () => {
+  const [type, setType] = useState("pdf");
+
+  const tabsConfig = [
+    { value: "tab1", label: "View Data", content: <ViewData /> },
+    { value: "tab2", label: "AI Actions", content: <AISwitch type={type} /> },
+    { value: "tab3", label: "Contribute", content: <Contribute /> },
+    { value: "tab4", label: "Code", content: <Code /> },
+    { value: "tab5", label: "Stats", content: <Stats /> },
+  ];
   return (
     <div className="flex flex-row gap-[60px]">
       <div className="flex flex-col gap-[50px]">
