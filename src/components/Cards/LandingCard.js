@@ -20,7 +20,7 @@ const LandingCard = ({ type }) => {
 
   return (
     <Link href={href}>
-      <div className="card w-96 bg-base-100 shadow-xl transform transition-transform duration-300 hover:scale-105">
+      <div className="card ring ring-indigo-50 w-96 bg-base-100  transform transition-transform duration-300 hover:scale-105">
         <figure className="px-10 pt-10">
           <img src={imageSrc} alt={title} className="rounded-xl" />
         </figure>
