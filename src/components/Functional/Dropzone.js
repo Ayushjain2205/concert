@@ -6,7 +6,7 @@ const FileDrop = () => {
 
   const files = acceptedFiles.map((file) => (
     <li className="flex flex-row items-center gap-[10px]" key={file.path}>
-      <img src="/icons/file-uploaded.svg" className="h-[30px]" alt="" />{" "}
+      <img src="/icons/file-uploaded.svg" className="h-[30px]" alt="" />
       {file.path} - {file.size} bytes
     </li>
   ));
@@ -24,8 +24,13 @@ const FileDrop = () => {
         <p>Drag 'n' drop some files here, or click to select files</p>
       </div>
       <div className="mx-auto">
-        <ul className=" mt-[40px]">{files}</ul>
+        <ul className="mt-[40px]">{files}</ul>
       </div>
+      {acceptedFiles.length > 0 && (
+        <button className="btn btn-outline btn-primary rounded-xl flex-end mt-[100px]">
+          Upload
+        </button>
+      )}
     </section>
   );
 };
