@@ -64,7 +64,7 @@ const DataSetPage = () => {
         </button>
       </div>
       <div className="rounded-xl p-4 ring ring-indigo-50 ">
-        <Tabs.Root className="flex flex-col w-[1100px]" defaultValue="tab1">
+        <Tabs.Root className="flex flex-col w-[1100px] " defaultValue="tab1">
           <Tabs.List
             className="shrink-0 flex border-b border-[#3d445110]"
             aria-label="Manage your account"
@@ -102,31 +102,31 @@ const DataSetPage = () => {
             </Tabs.Trigger>
           </Tabs.List>
           <Tabs.Content
-            className="grow p-5 bg-white rounded-b-md outline-none"
+            className="grow p-5 bg-white rounded-b-md outline-none max-h-[750px] overflow-scroll"
             value="tab1"
           >
             <ViewData />
           </Tabs.Content>
           <Tabs.Content
-            className="grow p-5 bg-white rounded-b-md outline-none"
+            className="grow p-5 bg-white rounded-b-md outline-none max-h-[750px] overflow-scroll"
             value="tab2"
           >
             <PdfAI />
           </Tabs.Content>
           <Tabs.Content
-            className="grow p-5 bg-white rounded-b-md outline-none"
+            className="grow p-5 bg-white rounded-b-md outline-none max-h-[750px] overflow-scroll"
             value="tab3"
           >
             <div>Contribute</div>
           </Tabs.Content>
           <Tabs.Content
-            className="grow p-5 bg-white rounded-b-md outline-none"
+            className="grow p-5 bg-white rounded-b-md outline-none max-h-[750px] overflow-scroll"
             value="tab4"
           >
             <div> Code </div>
           </Tabs.Content>
           <Tabs.Content
-            className="grow p-5 bg-white rounded-b-md outline-none"
+            className="grow p-5 bg-white rounded-b-md outline-none max-h-[750px] overflow-scroll"
             value="tab5"
           >
             <Stats />
