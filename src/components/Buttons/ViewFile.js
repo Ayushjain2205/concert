@@ -16,12 +16,12 @@ const ViewFile = () => {
     "https://w7.pngwing.com/pngs/895/199/png-transparent-spider-man-heroes-download-with-transparent-background-free-thumbnail.png";
   const type = "png";
   return (
-    <div>
+    <div className="tooltip" data-tip="View File">
       <button
         className="btn btn-ghost btn-xs"
         onClick={() => document.getElementById("my_modal_2").showModal()}
       >
-        <i className="fa-solid fa-eye"></i>
+        <i className="fa-solid fa-eye fa-lg"></i>
       </button>
       <dialog id="my_modal_2" className="modal">
         <div className="modal-box">

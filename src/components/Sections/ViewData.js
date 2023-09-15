@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ViewFile from "../Buttons/ViewFile";
+import { toast } from "react-hot-toast";
 
 const ViewData = () => {
   const [selectedRows, setSelectedRows] = useState([]);
@@ -95,6 +96,17 @@ const ViewData = () => {
     setSelectAll(!selectAll);
   };
 
+  const copyToClipboard = (text) => {
+    navigator.clipboard
+      .writeText(text)
+      .then(() => {
+        toast.success("Copied to clipboard");
+      })
+      .catch((err) => {
+        toast.error("Failed to copy");
+      });
+  };
+
   return (
     <div>
       <div className="overflow-x-auto">
@@ -113,7 +125,7 @@ const ViewData = () => {
               </th>
               <th>File Name</th>
               <th>Contributor</th>
-              <th></th>
+              <th>File ID</th>
               <th>
                 {selectedRows.length > 1 && (
                   <button className="btn btn-ghost btn-xs">
@@ -160,17 +172,31 @@ const ViewData = () => {
                 </td>
                 <td>
                   <span className="badge badge-ghost badge-sm">
-                    {file.contributor}
+                    {file.contributor.length > 15
+                      ? `${file.contributor.slice(0, 15)}...`
+                      : file.contributor}
                   </span>
+                </td>
+                <td>
+                  <div className="tooltip" data-tip="Copy">
+                    <button
+                      className="btn btn-ghost btn-xs"
+                      onClick={() => copyToClipboard(file.contributor)}
+                    >
+                      <i class="fa-solid fa-clipboard fa-lg"></i>
+                    </button>
+                  </div>
                 </td>
                 <td>
                   <ViewFile />
                 </td>
-                <th>
-                  <button className="btn btn-ghost btn-xs">
-                    <i className="fa-solid fa-download"></i>
-                  </button>
-                </th>
+                <td>
+                  <div className="tooltip" data-tip="Download">
+                    <button className="btn btn-ghost btn-xs">
+                      <i className="fa-solid fa-download fa-lg"></i>
+                    </button>
+                  </div>
+                </td>
               </tr>
             ))}
           </tbody>
