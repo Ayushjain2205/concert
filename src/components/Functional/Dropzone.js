@@ -12,20 +12,20 @@ const FileDrop = () => {
   ));
 
   return (
-    <section className="container">
+    <section className="container mx-auto mt-[20px]">
       <div
         {...getRootProps({
           className:
-            "dropzone flex flex-col items-center justify-center border border-dashed border-[#9381FF] rounded-xl h-[250px] w-[780px]",
+            "dropzone flex flex-col mx-auto items-center justify-center border border-dashed border-[#9381FF] rounded-xl h-[250px] w-[780px]",
         })}
       >
         <input {...getInputProps()} />
         <img src="/images/file-upload.svg" className="h-[50px]" alt="" />
         <p>Drag 'n' drop some files here, or click to select files</p>
       </div>
-      <aside>
+      <div className="mx-auto">
         <ul className=" mt-[40px]">{files}</ul>
-      </aside>
+      </div>
     </section>
   );
 };
