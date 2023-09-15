@@ -5,10 +5,11 @@ import PdfAI from "../../components/Sections/AI/PdfAI";
 import Stats from "../../components/Sections/Stats";
 import Contribute from "../../components/Sections/Contribute";
 import Code from "../../components/Sections/Code";
+import ImageAI from "../../components/Sections/AI/ImageAI";
 
 const tabsConfig = [
   { value: "tab1", label: "View Data", content: <ViewData /> },
-  { value: "tab2", label: "AI Actions", content: <PdfAI /> },
+  { value: "tab2", label: "AI Actions", content: <ImageAI /> },
   { value: "tab3", label: "Contribute", content: <Contribute /> },
   { value: "tab4", label: "Code", content: <Code /> },
   { value: "tab5", label: "Stats", content: <Stats /> },
