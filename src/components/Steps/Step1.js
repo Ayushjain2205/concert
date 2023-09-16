@@ -19,7 +19,7 @@ const Step1 = () => {
           className="input input-bordered input-primary focus:outline-none"
         />
       </div>
-      <div className="form-control  ">
+      <div className="form-control">
         <label className="label">
           <span className="label-text text-[16px]">Select Dataset Format:</span>
         </label>
@@ -40,6 +40,45 @@ const Step1 = () => {
             </div>
           ))}
         </div>
+      </div>
+      <div className="form-control w-2/3 ">
+        <label className="label">
+          <span className="label-text text-[16px]">
+            Which category does your dataset belong to?
+          </span>
+        </label>
+        <input
+          type="text"
+          placeholder="Category"
+          className="input input-bordered input-primary focus:outline-none"
+        />
+      </div>
+      <div className="form-control w-2/3 ">
+        <label className="label">
+          <span className="label-text text-[16px]">
+            Give your dataset a brief description:
+          </span>
+        </label>
+        <textarea
+          className="textarea textarea-primary focus:outline-none"
+          placeholder="Description"
+        ></textarea>
+      </div>
+      <div className="form-control w-2/3 relative mb-[20px]">
+        <label className="label">
+          <span className="label-text text-[16px]">Set a price:</span>
+        </label>
+        <input
+          type="number"
+          placeholder="Add Price"
+          value={100}
+          className="input input-bordered input-primary focus:outline-none pl-[40px]"
+        />
+        <img
+          src="/icons/royale-coin.svg"
+          className="h-[25px] absolute left-2 top-[58px] transform -translate-y-1/2"
+          alt=""
+        />
       </div>
     </div>
   );
