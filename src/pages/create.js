@@ -1,12 +1,13 @@
 import React, { useState } from "react";
+import { Step1, Step2, Step3, Step4 } from "../components/Steps";
 
 const Create = () => {
   const [currentStep, setCurrentStep] = useState(0);
   const steps = [
-    { label: "Register", content: "Content for Register" },
-    { label: "Choose plan", content: "Content for Choose plan" },
-    { label: "Purchase", content: "Content for Purchase" },
-    { label: "Receive Product", content: "Content for Receive Product" },
+    { label: "About", content: <Step1 /> },
+    { label: "Rules", content: <Step2 /> },
+    { label: "Add Data", content: <Step3 /> },
+    { label: "Confirm", content: <Step4 /> },
   ];
 
   const goNext = () => {
@@ -37,10 +38,10 @@ const Create = () => {
           </li>
         ))}
       </ul>
-      <div className="step-content rounded-xl bg-white p-4 ring ring-indigo-50">
+      <div className="step-content rounded-xl bg-white p-4 ring ring-indigo-50 w-[800px] m-auto">
         {steps[currentStep].content}
       </div>
-      <div className="navigation-buttons flex flex-row gap-[50px] justify-end">
+      <div className="navigation-buttons flex flex-row gap-[50px] justify-end w-[800px] m-auto">
         {currentStep > 0 && (
           <button
             className="btn btn-outline btn-primary rounded-xl"
