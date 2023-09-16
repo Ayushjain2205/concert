@@ -38,7 +38,7 @@ const Create = () => {
           </li>
         ))}
       </ul>
-      <div className="step-content rounded-xl bg-white p-4 ring ring-indigo-50 w-[800px] m-auto">
+      <div className="step-content rounded-xl bg-white p-4 ring ring-indigo-50 w-[800px] h-[674px] m-auto">
         {steps[currentStep].content}
       </div>
       <div className="navigation-buttons flex flex-row gap-[50px] justify-end w-[800px] m-auto">
