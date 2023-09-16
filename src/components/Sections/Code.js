@@ -5,18 +5,35 @@ import code from "../../data/code";
 
 const Code = () => {
   const [selectedLang, setSelectedLang] = useState("js");
+  const [selectedCategory, setSelectedCategory] = useState("file-summary"); // default to file-summary
+  const categoryData = code.find((item) => item.id === selectedCategory);
+  const desiredCode = categoryData[selectedLang];
+
   return (
     <div className="flex flex-row gap-[50px] mt-[20px]">
-      <div className="flex flex-col gap-[20px] w-2/5">
-        <CodeCard title="File Summary" image="/ai-icons/file-summary.svg" />
-        <CodeCard title="File Chat" image="/ai-icons/file-chat.svg" />
+      <div className="flex flex-col gap-[20px] w-[404px]">
+        <CodeCard
+          title="File Summary"
+          image="/ai-icons/file-summary.svg"
+          onClick={() => setSelectedCategory("file-summary")}
+        />
+        <CodeCard
+          title="File Chat"
+          image="/ai-icons/file-chat.svg"
+          onClick={() => setSelectedCategory("file-chat")}
+        />
         <CodeCard
           title="Generate Content"
           image="/ai-icons/generate-content.svg"
+          onClick={() => setSelectedCategory("generate-content")}
         />
-        <CodeCard title="CSV story" image="/ai-icons/csv-story.svg" />
+        <CodeCard
+          title="CSV story"
+          image="/ai-icons/csv-story.svg"
+          onClick={() => setSelectedCategory("csv-story")}
+        />
       </div>
-      <div className="flex flex-col w-3/5">
+      <div className="flex flex-col w-[606px]">
         <div className="flex flex-row gap-[20px] mb-[20px]">
           <button
             className="btn btn-outline btn-primary w-[130px]"
@@ -48,7 +65,7 @@ const Code = () => {
           </button>
         </div>
         <CopyBlock
-          text={code[selectedLang]}
+          text={desiredCode}
           language={selectedLang}
           showLineNumbers={true}
           theme={dracula}
