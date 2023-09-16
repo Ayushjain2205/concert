@@ -1,11 +1,11 @@
 import React from "react";
 
-const CodeCard = () => {
+const CodeCard = ({ title, image }) => {
   return (
     <div className="flex flex-row items-center justify-between rounded-xl bg-white p-4 ring ring-indigo-50 cursor-pointer hover:bg-[#B8B8FF30]">
       <div className="flex flex-row gap-[20px]">
-        <img src="/ai-icons/file-summary.svg" className="h-[35px]" alt="" />
-        <span className="text-[24px]">File summary</span>
+        <img src={image} className="h-[35px]" alt={title} />
+        <span className="text-[24px]">{title}</span>
       </div>
       <svg
         xmlns="http://www.w3.org/2000/svg"
