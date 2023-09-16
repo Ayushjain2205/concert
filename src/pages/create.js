@@ -40,13 +40,30 @@ const Create = () => {
       <div className="step-content rounded-xl bg-white p-4 ring ring-indigo-50">
         {steps[currentStep].content}
       </div>
-      <div className="navigation-buttons">
-        {currentStep > 0 && <button onClick={goPrev}>Previous</button>}
+      <div className="navigation-buttons flex flex-row gap-[50px] justify-end">
+        {currentStep > 0 && (
+          <button
+            className="btn btn-outline btn-primary rounded-xl"
+            onClick={goPrev}
+          >
+            Previous
+          </button>
+        )}
         {currentStep < steps.length - 1 && (
-          <button onClick={goNext}>Next</button>
+          <button
+            className="btn btn-outline btn-primary rounded-xl"
+            onClick={goNext}
+          >
+            Next
+          </button>
         )}
         {currentStep === steps.length - 1 && (
-          <button onClick={onFinish}>Finish</button>
+          <button
+            className="btn btn-outline btn-primary rounded-xl"
+            onClick={onFinish}
+          >
+            Finish
+          </button>
         )}
       </div>
     </div>
