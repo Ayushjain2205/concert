@@ -1,8 +1,11 @@
-import React from "react";
-
 const AICard = ({ title, image, description, id }) => {
+  const modalId = `AI-ability-${id}`;
+
   return (
-    <div className="flex flex-row rounded-xl bg-white p-4 ring ring-indigo-50 h-[200px] w-[500px] cursor-pointer hover:bg-[#B8B8FF30]">
+    <div
+      className="flex flex-row rounded-xl bg-white p-4 ring ring-indigo-50 h-[200px] w-[500px] cursor-pointer hover:bg-[#B8B8FF30]"
+      onClick={() => document.getElementById(modalId).showModal()}
+    >
       <div className="flex flex-col gap-[30px]">
         <div className="flex flex-row items-center gap-[20px]">
           <img src={image} className="h-[75px]" alt={title} />
@@ -10,6 +13,16 @@ const AICard = ({ title, image, description, id }) => {
         </div>
         <p className="opacity-50">{description}</p>
       </div>
+
+      <dialog id={modalId} className="modal">
+        <div className="modal-box">
+          <h3 className="font-bold text-lg">{title}</h3>
+          <p className="py-4">Press ESC key or click outside to close</p>
+        </div>
+        <form method="dialog" className="modal-backdrop">
+          <button>close</button>
+        </form>
+      </dialog>
     </div>
   );
 };
