@@ -4,11 +4,11 @@ const SideBar = () => {
   return (
     <div className="w-[350px]">
       <div className="space-y-2">
-        <details className="overflow-hidden rounded-xl border-2 border-[#B8B8FF] [&_summary::-webkit-details-marker]:hidden">
+        <details className="group overflow-hidden rounded-xl border-2 border-[#B8B8FF] [&_summary::-webkit-details-marker]:hidden">
           <summary className="flex cursor-pointer items-center justify-between gap-2 bg-white p-4 text-gray-900 transition">
             <span className="text-sm font-medium"> Category </span>
 
-            <span className="transition group-open:-rotate-180">
+            <span className="transition duration-300 group-open:-rotate-180">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -72,11 +72,11 @@ const SideBar = () => {
           </div>
         </details>
 
-        <details className="overflow-hidden rounded-xl border-2 border-[#B8B8FF] [&_summary::-webkit-details-marker]:hidden">
+        <details className="group overflow-hidden rounded-xl border-2 border-[#B8B8FF] [&_summary::-webkit-details-marker]:hidden">
           <summary className="flex cursor-pointer items-center justify-between gap-2 bg-white p-4 text-gray-900 transition">
             <span className="text-sm font-medium"> Price </span>
 
-            <span className="transition group-open:-rotate-180">
+            <span className="transition duration-300 group-open:-rotate-180">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -136,11 +136,11 @@ const SideBar = () => {
           </div>
         </details>
 
-        <details className="overflow-hidden rounded-xl border-2 border-[#B8B8FF] [&_summary::-webkit-details-marker]:hidden">
+        <details className="group overflow-hidden rounded-xl border-2 border-[#B8B8FF] [&_summary::-webkit-details-marker]:hidden">
           <summary className="flex cursor-pointer items-center justify-between gap-2 bg-white p-4 text-gray-900 transition">
             <span className="text-sm font-medium"> Numbers </span>
 
-            <span className="transition group-open:-rotate-180">
+            <span className="transition duration-300 group-open:-rotate-180">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
