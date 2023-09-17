@@ -26,6 +26,7 @@ const TabTrigger = ({ value, label }) => (
 
 const DataSetPage = () => {
   const [type, setType] = useState("pdf");
+  const [isBought, setIsBought] = useState(false);
 
   const tabsConfig = [
     { value: "tab1", label: "View Data", content: <ViewData /> },
@@ -87,10 +88,20 @@ const DataSetPage = () => {
             </div>
           </div>
         </div>
-        <button className="btn btn-outline btn-primary rounded-xl">
-          Buy with 50{" "}
-          <img src="/icons/royale-coin.svg" className="h-[32px]" alt="" />
-        </button>
+        {isBought ? (
+          <button className="btn btn-outline btn-primary rounded-xl">
+            Fork with 100{" "}
+            <img src="/icons/royale-coin.svg" className="h-[32px]" alt="" />
+          </button>
+        ) : (
+          <button
+            className="btn btn-outline btn-primary rounded-xl"
+            onClick={() => setIsBought(true)}
+          >
+            Buy with 50{" "}
+            <img src="/icons/royale-coin.svg" className="h-[32px]" alt="" />
+          </button>
+        )}
       </div>
       <div className="rounded-xl p-4 ring ring-indigo-50">
         <Root className="flex flex-col w-[1100px]" defaultValue="tab1">
@@ -109,7 +120,7 @@ const DataSetPage = () => {
               value={tab.value}
             >
               {tab.content}
-              <BlurredOverlay />
+              {!isBought && <BlurredOverlay />}
             </Content>
           ))}
         </Root>
