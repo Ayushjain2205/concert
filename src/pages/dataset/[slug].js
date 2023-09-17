@@ -6,6 +6,15 @@ import Contribute from "../../components/Sections/Contribute";
 import Code from "../../components/Sections/Code";
 import AISwitch from "../../components/Sections/AISwitch";
 
+const BlurredOverlay = () => (
+  <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 backdrop-blur-md z-10">
+    <div className="flex flex-col gap-[10px] p-10 bg-white rounded-xl">
+      <img src="/icons/locked.svg" className="h-[120px]" alt="" />
+      <span className="text-2xl font-semibold">Buy to View</span>
+    </div>
+  </div>
+);
+
 const TabTrigger = ({ value, label }) => (
   <Trigger
     className="focus:outline-none bg-white px-5 h-[45px] flex-1 flex items-center justify-center text-[15px] leading-none text-mauve11 select-none first:rounded-tl-md last:rounded-tr-md hover:text-violet11 data-[state=active]:text-[#9381FF] data-[state=active]:shadow-[inset_0_-1px_0_0,0_1px_0_0] data-[state=active]:shadow-current outline-none  cursor-pointer focus:outline-none"
@@ -96,10 +105,11 @@ const DataSetPage = () => {
           {tabsConfig.map((tab) => (
             <Content
               key={tab.value}
-              className="grow p-5 bg-white rounded-b-md outline-none max-h-[750px] overflow-scroll"
+              className="grow p-5 bg-white rounded-b-md outline-none max-h-[750px] overflow-scroll relative"
               value={tab.value}
             >
               {tab.content}
+              <BlurredOverlay />
             </Content>
           ))}
         </Root>
