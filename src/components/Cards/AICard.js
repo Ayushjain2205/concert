@@ -15,7 +15,7 @@ const AICard = ({ title, image, description, id, component: Component }) => {
 
       <dialog id={modalId} className="modal">
         <div className="modal-box">
-          <h3 className="font-bold text-lg">{title}</h3>
+          <h3 className="font-bold text-lg mb-[20px]">{title}</h3>
           <Component />
         </div>
         <form method="dialog" className="modal-backdrop">

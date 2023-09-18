@@ -5,8 +5,12 @@ import FileSelect from "../Functional/FileSelect";
 const GenerateContent = () => {
   return (
     <div className="h-[500px]">
-      Generate Content hello
-      <FileSelect />
+      <div className="form-control">
+        <label className="label">
+          <span className="label-text text-[16px]">Select files</span>
+        </label>
+        <FileSelect />
+      </div>
     </div>
   );
 };

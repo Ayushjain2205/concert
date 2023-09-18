@@ -14,12 +14,12 @@ const FileSelect = () => {
   };
 
   return (
-    <div className="">
-      <details className="dropdown">
-        <summary className="m-1 card ring ring-indigo-50 rounded-xl p-4 w-[400px] cursor-pointer">
+    <div className="w-full">
+      <details className="dropdown w-full">
+        <summary className="m-1 w-full card ring ring-indigo-50 rounded-xl p-4 cursor-pointer">
           {`${countSelectedItems()} files selected`}
         </summary>
-        <ul className="p-4 shadow dropdown-content z-[1] bg-base-100 rounded-box w-[400px] h-[200px] overflow-scroll">
+        <ul className="p-4 shadow dropdown-content z-[1] bg-base-100 rounded-box w-full h-[200px] overflow-scroll">
           {selectedItems.map((isSelected, index) => (
             <li className="flex w-[400px]" key={index}>
               <div className="form-control">
