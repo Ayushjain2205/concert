@@ -17,7 +17,7 @@ const AICard = ({ title, image, description, id }) => {
       <dialog id={modalId} className="modal">
         <div className="modal-box">
           <h3 className="font-bold text-lg">{title}</h3>
-          <p className="py-4">Press ESC key or click outside to close</p>
+          Ability
         </div>
         <form method="dialog" className="modal-backdrop">
           <button>close</button>

@@ -1,27 +1,9 @@
 import React from "react";
 import AICard from "../../Cards/AICard";
+import ai_ability_data from "../../../data/ai_ability_data";
 
 const ImageAI = () => {
-  const cardData = [
-    {
-      title: "Generate Similar Image",
-      image: "/ai-icons/image-similar.svg",
-      description: "Generate an image similar to the ones in the dataset.",
-      id: "image-similar",
-    },
-    {
-      title: "Generate Fusion Image",
-      image: "/ai-icons/image-fusion.svg",
-      description: "Generate an image combining two images.",
-      id: "image-fusion",
-    },
-    {
-      title: "Generate with prompt",
-      image: "/ai-icons/image-prompt.svg",
-      description: "Generate an image by giving a custom prompt.",
-      id: "image-prompt",
-    },
-  ];
+  const cardData = ai_ability_data.filter((card) => card.category === "image");
 
   return (
     <div className="grid grid-cols-2 gap-[40px] my-[20px]">
