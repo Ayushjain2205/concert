@@ -1,6 +1,5 @@
-const AICard = ({ title, image, description, id }) => {
+const AICard = ({ title, image, description, id, component: Component }) => {
   const modalId = `AI-ability-${id}`;
-
   return (
     <div
       className="flex flex-row rounded-xl bg-white p-4 ring ring-indigo-50 h-[200px] w-[500px] cursor-pointer hover:bg-[#B8B8FF30]"
@@ -17,7 +16,7 @@ const AICard = ({ title, image, description, id }) => {
       <dialog id={modalId} className="modal">
         <div className="modal-box">
           <h3 className="font-bold text-lg">{title}</h3>
-          Ability
+          <Component />
         </div>
         <form method="dialog" className="modal-backdrop">
           <button>close</button>

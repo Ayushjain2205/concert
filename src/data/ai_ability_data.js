@@ -1,3 +1,14 @@
+import {
+  CsvStory,
+  CsvVisualisation,
+  FileChat,
+  FileSummary,
+  GenerateContent,
+  ImageFusion,
+  ImagePrompt,
+  ImageSimilar,
+} from "../components/AIAbilities";
+
 const ai_ability_data = [
   {
     title: "Generate Visualisation",
@@ -5,6 +16,7 @@ const ai_ability_data = [
     description: "Generate charts and graphs.",
     id: "csv-visualization",
     category: "csv",
+    component: CsvVisualisation,
   },
   {
     title: "Get data story",
@@ -12,6 +24,7 @@ const ai_ability_data = [
     description: "Get relevant data stories from the files.",
     id: "csv-story",
     category: "csv",
+    component: CsvStory,
   },
   {
     title: "Generate Similar Image",
@@ -19,6 +32,7 @@ const ai_ability_data = [
     description: "Generate an image similar to the ones in the dataset.",
     id: "image-similar",
     category: "image",
+    component: ImageSimilar,
   },
   {
     title: "Generate Fusion Image",
@@ -26,6 +40,7 @@ const ai_ability_data = [
     description: "Generate an image combining two images.",
     id: "image-fusion",
     category: "image",
+    component: ImageFusion,
   },
   {
     title: "Generate with prompt",
@@ -33,6 +48,7 @@ const ai_ability_data = [
     description: "Generate an image by giving a custom prompt.",
     id: "image-prompt",
     category: "image",
+    component: ImagePrompt,
   },
   {
     title: "File summary",
@@ -40,6 +56,7 @@ const ai_ability_data = [
     description: "Get the summary of a PDF file.",
     id: "file-summary",
     category: "pdf",
+    component: FileSummary,
   },
   {
     title: "Chat with file",
@@ -48,6 +65,7 @@ const ai_ability_data = [
       "Chat with a PDF file, ask questions get contextual relevant answers.",
     id: "file-chat",
     category: "pdf",
+    component: FileChat,
   },
   {
     title: "Generate content",
@@ -55,6 +73,7 @@ const ai_ability_data = [
     description: "Generate content based on a file.",
     id: "generate-content",
     category: "pdf",
+    component: GenerateContent,
   },
 ];
 

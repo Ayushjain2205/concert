@@ -13,6 +13,7 @@ const ImageAI = () => {
           title={card.title}
           image={card.image}
           description={card.description}
+          component={card.component}
           id={card.id}
         />
       ))}
