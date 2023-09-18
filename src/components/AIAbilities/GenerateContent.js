@@ -1,7 +1,13 @@
 import React from "react";
+import Loader from "../UI/Loader";
 
 const GenerateContent = () => {
-  return <div>GenerateContent</div>;
+  return (
+    <div>
+      Generate Content hello
+      <Loader />
+    </div>
+  );
 };
 
 export default GenerateContent;
