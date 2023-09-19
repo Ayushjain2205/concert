@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import FileSelect from "../Functional/FileSelect";
 import Loader from "../UI/Loader";
+import toast from "react-hot-toast";
 
 const GenerateContent = () => {
   const [category, setCategory] = useState("");
@@ -10,6 +11,7 @@ const GenerateContent = () => {
     setButtonState("generating");
     setTimeout(() => {
       setButtonState("download");
+      toast.success("File generated.");
     }, 3000);
   };
 
