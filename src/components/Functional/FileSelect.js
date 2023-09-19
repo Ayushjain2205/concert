@@ -15,9 +15,25 @@ const FileSelect = () => {
 
   return (
     <div className="w-full">
-      <details className="dropdown w-full">
-        <summary className="m-1 w-full card ring ring-indigo-50 rounded-xl p-4 cursor-pointer">
+      <details className="dropdown group w-full">
+        <summary className="flex flex-row justify-between items-center m-1 w-full card ring ring-indigo-50 rounded-xl p-4 cursor-pointer">
           {`${countSelectedItems()} files selected`}
+          <span className="transition duration-300 group-open:-rotate-180">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className="h-6 w-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+              />
+            </svg>
+          </span>
         </summary>
         <ul className="p-4 shadow dropdown-content z-[1] bg-base-100 rounded-box w-full h-[200px] overflow-scroll">
           {selectedItems.map((isSelected, index) => (
