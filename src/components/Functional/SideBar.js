@@ -4,7 +4,10 @@ const SideBar = () => {
   return (
     <div className="w-[350px]">
       <div className="space-y-2">
-        <details className="group overflow-hidden rounded-xl border-2 border-[#B8B8FF] [&_summary::-webkit-details-marker]:hidden">
+        <details
+          className="group overflow-hidden rounded-xl border-2 border-[#B8B8FF] [&_summary::-webkit-details-marker]:hidden"
+          open
+        >
           <summary className="flex cursor-pointer items-center justify-between gap-2 bg-white p-4 text-gray-900 transition">
             <span className="text-sm font-medium"> Category </span>
 
@@ -72,7 +75,10 @@ const SideBar = () => {
           </div>
         </details>
 
-        <details className="group overflow-hidden rounded-xl border-2 border-[#B8B8FF] [&_summary::-webkit-details-marker]:hidden">
+        <details
+          className="group overflow-hidden rounded-xl border-2 border-[#B8B8FF] [&_summary::-webkit-details-marker]:hidden"
+          open
+        >
           <summary className="flex cursor-pointer items-center justify-between gap-2 bg-white p-4 text-gray-900 transition">
             <span className="text-sm font-medium"> Price </span>
 
@@ -136,7 +142,10 @@ const SideBar = () => {
           </div>
         </details>
 
-        <details className="group overflow-hidden rounded-xl border-2 border-[#B8B8FF] [&_summary::-webkit-details-marker]:hidden">
+        <details
+          className="group overflow-hidden rounded-xl border-2 border-[#B8B8FF] [&_summary::-webkit-details-marker]:hidden"
+          open
+        >
           <summary className="flex cursor-pointer items-center justify-between gap-2 bg-white p-4 text-gray-900 transition">
             <span className="text-sm font-medium"> Numbers </span>
 
@@ -177,7 +186,7 @@ const SideBar = () => {
                   min={0}
                   max="100"
                   className="range range-primary range-xs"
-                  step="25"
+                  step="75"
                 />
               </div>
               <div className="flex flex-col gap-[10px] ">
@@ -187,7 +196,7 @@ const SideBar = () => {
                   min={0}
                   max="100"
                   className="range range-primary range-xs"
-                  step="25"
+                  step="0"
                 />
               </div>
             </div>
