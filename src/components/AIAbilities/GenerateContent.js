@@ -36,7 +36,7 @@ const GenerateContent = () => {
             value="Generate summary"
             onChange={(e) => setCategory(e.target.value)}
           />
-          Generate summary
+          Generate action items
         </label>
         <label className="cursor-pointer inline-flex items-center mr-3 text-[20px]">
           <input
