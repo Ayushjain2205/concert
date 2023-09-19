@@ -1,21 +1,20 @@
 import React, { useState } from "react";
 import FileSelect from "../Functional/FileSelect";
+import Loader from "../UI/Loader";
 
 const GenerateContent = () => {
-  const [category, setCategory] = useState(""); // Track selected category
+  const [category, setCategory] = useState("");
   const [buttonState, setButtonState] = useState("initial"); // "initial", "generating", "download"
 
   const handleGenerateClick = () => {
     setButtonState("generating");
-
-    // After 3 seconds, replace the generating button with the download button
     setTimeout(() => {
       setButtonState("download");
     }, 3000);
   };
 
   return (
-    <div className="">
+    <div className="relative h-full">
       <div className="form-control">
         <label className="label">
           <span className="label-text text-[16px]">Select files</span>
@@ -31,7 +30,7 @@ const GenerateContent = () => {
           <input
             type="radio"
             name="category"
-            className="mr-2 "
+            className="mr-2"
             value="Generate summary"
             onChange={(e) => setCategory(e.target.value)}
           />
@@ -81,6 +80,13 @@ const GenerateContent = () => {
         <button className="btn btn-active btn-primary w-full rounded-xl mt-4">
           Download <i className="fa-solid fa-file-arrow-down"></i>
         </button>
+      )}
+
+      {/* Loader Overlay */}
+      {buttonState === "generating" && (
+        <div className="absolute top-0 left-0 w-full h-full bg-white bg-opacity-50 flex items-center justify-center z-10">
+          <Loader />
+        </div>
       )}
     </div>
   );
