@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import FileSelect from "../Functional/FileSelect";
 import Loader from "../UI/Loader";
-import toast from "react-hot-toast";
+import { successToast } from "../../helpers/showToast";
 
 const GenerateContent = () => {
   const [category, setCategory] = useState("");
@@ -11,7 +11,7 @@ const GenerateContent = () => {
     setButtonState("generating");
     setTimeout(() => {
       setButtonState("download");
-      toast.success("File generated.");
+      successToast("File generated.");
     }, 3000);
   };
 
@@ -79,7 +79,10 @@ const GenerateContent = () => {
       )}
 
       {buttonState === "download" && (
-        <button className="btn btn-active btn-primary w-full rounded-xl mt-4">
+        <button
+          className="btn btn-active btn-primary w-full rounded-xl mt-4"
+          onClick={() => successToast("Download successful")}
+        >
           Download <i className="fa-solid fa-file-arrow-down"></i>
         </button>
       )}
