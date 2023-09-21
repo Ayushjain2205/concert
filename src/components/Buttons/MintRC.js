@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useSigner } from "@thirdweb-dev/react";
 import abi from "../../abi/RoyalCoin";
 import { ethers } from "ethers";
+import { successToast, errorToast } from "../../helpers/showToast";
 
 const contractAddress = "0xDb499857812569403F0aA1036d453d30945C8751";
 const walletAddress = "0xCafa93E9985793E2475bD58B9215c21Dbd421fD0"; // This seems unused in the original code, but I've kept it here just in case.
@@ -20,9 +21,9 @@ const MintRC = () => {
 
     try {
       await contract.mint(to, amount);
-      console.log("Minting successful");
+      successToast(`${amount} tokens added to your wallet`);
     } catch (error) {
-      console.error("Error minting tokens:", error);
+      errorToast("Error buying tokens");
     }
   };
 
