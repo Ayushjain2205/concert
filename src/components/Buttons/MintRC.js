@@ -20,7 +20,8 @@ const MintRC = () => {
     const amount = ethers.utils.parseUnits(inputValue.toString(), 0);
 
     try {
-      await contract.mint(to, amount);
+      let tx = await contract.mint(to, amount);
+      await tx.wait(); // Wait for the transaction to be mined
       successToast(`${amount} tokens added to your wallet`);
     } catch (error) {
       errorToast("Error buying tokens");
