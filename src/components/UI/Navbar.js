@@ -40,7 +40,7 @@ const Navbar = () => {
             <img src="/icons/royale-coin.svg" className="w-[35px]" alt="" />
           </div>
         )}
-        <ConnectWallet className="connect-button" />
+        <ConnectWallet theme="light" className="connect-button" />
       </div>
     </div>
   );
