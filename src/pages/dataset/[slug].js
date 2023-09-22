@@ -27,7 +27,7 @@ const TabTrigger = ({ value, label }) => (
 );
 
 const DataSetPage = ({
-  dataset: { name, category, description, type, price },
+  dataset: { name, category, description, type, price, users, files, forks },
 }) => {
   const [isBought, setIsBought] = useState(false);
 
@@ -62,7 +62,7 @@ const DataSetPage = ({
               className="flex items-center tooltip gap-[8px] text-[#9381FF]"
             >
               <i class="fa-solid fa-users"></i>
-              <span>200</span>
+              <span>{users}</span>
             </div>
 
             <span className="hidden sm:block" aria-hidden="true">
@@ -74,7 +74,7 @@ const DataSetPage = ({
               className="flex tooltip items-center gap-[8px] text-[#9381FF]"
             >
               <i class="fa-solid fa-file"></i>
-              <span>200</span>
+              <span>{files}</span>
             </div>
 
             <span className="hidden sm:block" aria-hidden="true">
@@ -86,7 +86,7 @@ const DataSetPage = ({
               className="flex tooltip items-center gap-[8px] text-[#9381FF]"
             >
               <i class="fa-solid fa-code-fork"></i>
-              <span>200</span>
+              <span>{forks}</span>
             </div>
           </div>
         </div>

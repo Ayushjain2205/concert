@@ -25,6 +25,9 @@ const Explore = () => {
                 description={dataset.description}
                 type={dataset.type}
                 price={dataset.price}
+                users={dataset.users}
+                files={dataset.files}
+                forks={dataset.forks}
               />
             </Link>
           ))}
