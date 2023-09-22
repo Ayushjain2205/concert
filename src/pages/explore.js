@@ -2,6 +2,7 @@ import React from "react";
 import SearchBar from "../components/Functional/SearchBar";
 import SideBar from "../components/Functional/SideBar";
 import DatasetCard from "../components/Cards/DatasetCard";
+import datasets from "../data/datasets";
 
 const Explore = () => {
   return (
@@ -10,10 +11,16 @@ const Explore = () => {
       <div className="flex flex-row w-full mt-[30px] gap-[60px]">
         <SideBar />
         <div className="flex flex-col gap-[25px]">
-          <DatasetCard />
-          <DatasetCard />
-          <DatasetCard />
-          <DatasetCard />
+          {datasets.map((dataset) => (
+            <DatasetCard
+              key={dataset.name}
+              name={dataset.name}
+              category={dataset.category}
+              description={dataset.description}
+              type={dataset.type}
+              price={dataset.price}
+            />
+          ))}
         </div>
       </div>
     </div>
