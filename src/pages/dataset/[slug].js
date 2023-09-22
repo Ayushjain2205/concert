@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { Root, List, Trigger, Content } from "@radix-ui/react-tabs";
+import slugify from "slugify";
 import ViewData from "../../components/Sections/ViewData";
 import Stats from "../../components/Sections/Stats";
 import Contribute from "../../components/Sections/Contribute";
 import Code from "../../components/Sections/Code";
 import AISwitch from "../../components/Sections/AISwitch";
+import datasets from "../../data/datasets";
 
 const BlurredOverlay = () => (
   <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 backdrop-blur-md z-10">
@@ -17,15 +19,16 @@ const BlurredOverlay = () => (
 
 const TabTrigger = ({ value, label }) => (
   <Trigger
-    className="focus:outline-none bg-white px-5 h-[45px] flex-1 flex items-center justify-center text-[15px] leading-none text-mauve11 select-none first:rounded-tl-md last:rounded-tr-md hover:text-violet11 data-[state=active]:text-[#9381FF] data-[state=active]:shadow-[inset_0_-1px_0_0,0_1px_0_0] data-[state=active]:shadow-current outline-none  cursor-pointer focus:outline-none"
+    className="bg-white px-5 h-[45px] flex-1 flex items-center justify-center text-[15px] leading-none text-mauve11 select-none first:rounded-tl-md last:rounded-tr-md hover:text-violet11 data-[state=active]:text-[#9381FF] data-[state=active]:shadow-[inset_0_-1px_0_0,0_1px_0_0] data-[state=active]:shadow-current outline-none  cursor-pointer focus:outline-none"
     value={value}
   >
     {label}
   </Trigger>
 );
 
-const DataSetPage = () => {
-  const [type, setType] = useState("pdf");
+const DataSetPage = ({
+  dataset: { name, category, description, type, price },
+}) => {
   const [isBought, setIsBought] = useState(false);
 
   const tabsConfig = [
@@ -40,19 +43,18 @@ const DataSetPage = () => {
       <div className="flex flex-col gap-[50px]">
         <div className="flex flex-col gap-[10px] w-[350px] rounded-xl p-4 ring ring-indigo-50 bg-[#B8B8FF40]">
           <div>
-            <img src="/icons/pdf.svg" className="h-[200px]" alt="" />
+            <img
+              src={`/icons/${type}.svg`}
+              className="h-[200px] mb-[20px]"
+              alt=""
+            />
           </div>
-          <p className="font-bold text-[20px]">Dataset Name</p>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam
-            nulla amet voluptatum sit rerum, atque, quo culpa ut necessitatibus
-            eius suscipit eum accusamus, aperiam voluptas exercitationem facere
-            aliquid fuga. Sint.
-          </p>
+          <p className="font-bold text-[20px]">{name}</p>
+          <p>{description}</p>
           <div>
-            <strong className="rounded-xl border border-indigo-500 bg-indigo-500 px-3 py-1.5 text-[10px] font-medium text-white">
-              Category
-            </strong>
+            <div className="flex flex-row justify-center w-[100px] rounded-xl border border-indigo-500 bg-indigo-500 px-3 py-1.5 text-[10px] font-bold uppercase text-white">
+              {category}
+            </div>
           </div>
           <div className="mt-4 sm:flex sm:items-center sm:gap-2">
             <div
@@ -98,7 +100,7 @@ const DataSetPage = () => {
             className="btn btn-outline btn-primary rounded-xl"
             onClick={() => setIsBought(true)}
           >
-            Buy with 50{" "}
+            Buy with {price}{" "}
             <img src="/icons/royale-coin.svg" className="h-[32px]" alt="" />
           </button>
         )}
@@ -130,3 +132,22 @@ const DataSetPage = () => {
 };
 
 export default DataSetPage;
+
+export async function getServerSideProps(context) {
+  const slug = context.params.slug;
+  const dataset = datasets.find(
+    (d) => slugify(d.name, { lower: true }) === slug
+  );
+
+  if (!dataset) {
+    return {
+      notFound: true,
+    };
+  }
+
+  return {
+    props: {
+      dataset,
+    },
+  };
+}
