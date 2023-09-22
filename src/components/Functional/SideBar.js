@@ -5,7 +5,7 @@ const SideBar = () => {
     <div className="w-[350px]">
       <div className="space-y-2">
         <details
-          className="group overflow-hidden rounded-xl border-2 border-[#B8B8FF] [&_summary::-webkit-details-marker]:hidden"
+          className="group overflow-hidden rounded-xl border-2 border-[#B8B8FF] [&_summary::-webkit-details-marker]:hidden w-[350px]"
           open
         >
           <summary className="flex cursor-pointer items-center justify-between gap-2 bg-white p-4 text-gray-900 transition">
@@ -76,7 +76,7 @@ const SideBar = () => {
         </details>
 
         <details
-          className="group overflow-hidden rounded-xl border-2 border-[#B8B8FF] [&_summary::-webkit-details-marker]:hidden"
+          className="group overflow-hidden rounded-xl border-2 border-[#B8B8FF] [&_summary::-webkit-details-marker]:hidden w-[350px]"
           open
         >
           <summary className="flex cursor-pointer items-center justify-between gap-2 bg-white p-4 text-gray-900 transition">
@@ -143,7 +143,7 @@ const SideBar = () => {
         </details>
 
         <details
-          className="group overflow-hidden rounded-xl border-2 border-[#B8B8FF] [&_summary::-webkit-details-marker]:hidden"
+          className="group overflow-hidden rounded-xl border-2 border-[#B8B8FF] [&_summary::-webkit-details-marker]:hidden w-[350px]"
           open
         >
           <summary className="flex cursor-pointer items-center justify-between gap-2 bg-white p-4 text-gray-900 transition">
