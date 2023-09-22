@@ -9,7 +9,7 @@ import AISwitch from "../../components/Sections/AISwitch";
 import datasets from "../../data/datasets";
 
 const BlurredOverlay = () => (
-  <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 backdrop-blur-md z-10">
+  <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 backdrop-blur-md z-10 mt-[20px] rounded">
     <div className="flex flex-col gap-[10px] p-10 bg-white rounded-xl">
       <img src="/icons/locked.svg" className="h-[120px]" alt="" />
       <span className="text-2xl font-semibold">Buy to View</span>
