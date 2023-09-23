@@ -7,6 +7,7 @@ import Contribute from "../../components/Sections/Contribute";
 import Code from "../../components/Sections/Code";
 import AISwitch from "../../components/Sections/AISwitch";
 import datasets from "../../data/datasets";
+import StatsInfo from "../../components/Functional/StatsInfo";
 
 const BlurredOverlay = () => (
   <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 backdrop-blur-md z-10 mt-[20px] rounded">
@@ -56,38 +57,21 @@ const DataSetPage = ({
               {category}
             </div>
           </div>
+
           <div className="mt-4 sm:flex sm:items-center sm:gap-2">
-            <div
-              data-tip="Users"
-              className="flex items-center tooltip gap-[8px] text-[#9381FF]"
-            >
-              <i class="fa-solid fa-users"></i>
-              <span>{users}</span>
-            </div>
+            <StatsInfo label="Users" icon="fa-users" value={users} />
 
             <span className="hidden sm:block" aria-hidden="true">
               &middot;
             </span>
 
-            <div
-              data-tip="Files"
-              className="flex tooltip items-center gap-[8px] text-[#9381FF]"
-            >
-              <i class="fa-solid fa-file"></i>
-              <span>{files}</span>
-            </div>
+            <StatsInfo label="Files" icon="fa-file" value={files} />
 
             <span className="hidden sm:block" aria-hidden="true">
               &middot;
             </span>
 
-            <div
-              data-tip="Forks"
-              className="flex tooltip items-center gap-[8px] text-[#9381FF]"
-            >
-              <i class="fa-solid fa-code-fork"></i>
-              <span>{forks}</span>
-            </div>
+            <StatsInfo label="Forks" icon="fa-code-fork" value={forks} />
           </div>
         </div>
         {isBought ? (
