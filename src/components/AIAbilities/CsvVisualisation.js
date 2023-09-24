@@ -2,15 +2,18 @@ import React, { useState } from "react";
 import FileSelect from "../Functional/FileSelect";
 import { successToast } from "../../helpers/showToast";
 import Loader from "../UI/Loader";
+import { Web3TokensPerformance } from "../Charts";
 
 const CsvVisualisation = () => {
   const [buttonState, setButtonState] = useState("initial");
+  const [showWeb3Tokens, setShowWeb3Tokens] = useState(false);
 
   const handleGenerateClick = () => {
     setButtonState("generating");
     setTimeout(() => {
       setButtonState("download");
       successToast("Visualization generated.");
+      setShowWeb3Tokens(true);
     }, 3000);
   };
   return (
@@ -21,7 +24,7 @@ const CsvVisualisation = () => {
         </label>
         <FileSelect />
       </div>
-      <div className="form-control mb-[150px]">
+      <div className="form-control mb-[20px]">
         <label className="label">
           <span className="label-text text-[16px]">Select Visualization</span>
         </label>
@@ -59,6 +62,7 @@ const CsvVisualisation = () => {
           Generate
         </button>
       </div>
+      {showWeb3Tokens && <Web3TokensPerformance />}
       {buttonState === "generating" && (
         <div className="absolute top-0 left-0 w-full h-full bg-white bg-opacity-50 flex items-center justify-center z-10">
           <Loader />
