@@ -33,7 +33,7 @@ const DataSetPage = ({
   const [isBought, setIsBought] = useState(false);
 
   const tabsConfig = [
-    { value: "tab1", label: "View Data", content: <ViewData /> },
+    { value: "tab1", label: "View Data", content: <ViewData type={type} /> },
     { value: "tab2", label: "AI Actions", content: <AISwitch type={type} /> },
     { value: "tab3", label: "Contribute", content: <Contribute /> },
     { value: "tab4", label: "Code", content: <Code /> },

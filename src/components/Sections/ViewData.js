@@ -1,73 +1,13 @@
 import React, { useState } from "react";
 import ViewFile from "../Buttons/ViewFile";
 import { toast } from "react-hot-toast";
+import files from "../../data/files";
 
-const ViewData = () => {
+const ViewData = ({ type }) => {
   const [selectedRows, setSelectedRows] = useState([]);
   const [selectAll, setSelectAll] = useState(false);
 
-  const data = [
-    {
-      filename: "name.pdf",
-      contributor: "0xCafa93E9985793E2475bD58B9215c21Dbd421fD0",
-      size: "108KB",
-    },
-    {
-      filename: "name.pdf",
-      contributor: "0xCafa93E9985793E2475bD58B9215c21Dbd421fD0",
-      size: "108KB",
-    },
-    {
-      filename: "name.pdf",
-      contributor: "0xCafa93E9985793E2475bD58B9215c21Dbd421fD0",
-      size: "108KB",
-    },
-    {
-      filename: "name.pdf",
-      contributor: "0xCafa93E9985793E2475bD58B9215c21Dbd421fD0",
-      size: "108KB",
-    },
-    {
-      filename: "name.pdf",
-      contributor: "0xCafa93E9985793E2475bD58B9215c21Dbd421fD0",
-      size: "108KB",
-    },
-    {
-      filename: "name.pdf",
-      contributor: "0xCafa93E9985793E2475bD58B9215c21Dbd421fD0",
-      size: "108KB",
-    },
-    {
-      filename: "name.pdf",
-      contributor: "0xCafa93E9985793E2475bD58B9215c21Dbd421fD0",
-      size: "108KB",
-    },
-    {
-      filename: "name.pdf",
-      contributor: "0xCafa93E9985793E2475bD58B9215c21Dbd421fD0",
-      size: "108KB",
-    },
-    {
-      filename: "name.pdf",
-      contributor: "0xCafa93E9985793E2475bD58B9215c21Dbd421fD0",
-      size: "108KB",
-    },
-    {
-      filename: "name.pdf",
-      contributor: "0xCafa93E9985793E2475bD58B9215c21Dbd421fD0",
-      size: "108KB",
-    },
-    {
-      filename: "name.pdf",
-      contributor: "0xCafa93E9985793E2475bD58B9215c21Dbd421fD0",
-      size: "108KB",
-    },
-    {
-      filename: "name.pdf",
-      contributor: "0xCafa93E9985793E2475bD58B9215c21Dbd421fD0",
-      size: "108KB",
-    },
-  ];
+  const data = files[type];
 
   const toggleRowSelection = (index) => {
     const newSelectedRows = [...selectedRows];
