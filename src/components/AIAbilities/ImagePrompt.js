@@ -37,11 +37,13 @@ const ImagePrompt = () => {
       </div>
 
       {showImage && (
-        <img
-          src="https://replicate.com/static/home/sdxl.532cebb4a97a.jpg"
-          className="h-[300px] mt-[30px]"
-          alt=""
-        />
+        <div className="flex flex-row justify-center">
+          <img
+            src="https://replicate.com/static/home/sdxl.532cebb4a97a.jpg"
+            className="h-[300px] mt-[30px]"
+            alt=""
+          />
+        </div>
       )}
 
       {buttonState === "initial" && (
