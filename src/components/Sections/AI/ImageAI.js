@@ -2,7 +2,7 @@ import React from "react";
 import AICard from "../../Cards/AICard";
 import ai_ability_data from "../../../data/ai_ability_data";
 
-const ImageAI = () => {
+const ImageAI = ({ type }) => {
   const cardData = ai_ability_data.filter((card) => card.category === "image");
 
   return (
@@ -15,6 +15,7 @@ const ImageAI = () => {
           description={card.description}
           component={card.component}
           id={card.id}
+          type={type}
         />
       ))}
     </div>

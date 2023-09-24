@@ -1,4 +1,11 @@
-const AICard = ({ title, image, description, id, component: Component }) => {
+const AICard = ({
+  title,
+  image,
+  description,
+  id,
+  type,
+  component: Component,
+}) => {
   const modalId = `AI-ability-${id}`;
   return (
     <div
@@ -16,7 +23,7 @@ const AICard = ({ title, image, description, id, component: Component }) => {
       <dialog id={modalId} className="modal">
         <div className="modal-box">
           <h3 className="font-bold text-lg mb-[20px]">{title}</h3>
-          <Component />
+          <Component type={type} />
         </div>
         <form method="dialog" className="modal-backdrop">
           <button>close</button>

@@ -6,11 +6,11 @@ import CsvAI from "./AI/CsvAI";
 const AISwitch = ({ type }) => {
   switch (type) {
     case "pdf":
-      return <PdfAI />;
+      return <PdfAI type={type} />;
     case "image":
-      return <ImageAI />;
+      return <ImageAI type={type} />;
     case "csv":
-      return <CsvAI />;
+      return <CsvAI type={type} />;
     default:
       return <PdfAI />;
   }

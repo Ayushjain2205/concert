@@ -1,7 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import files from "../../data/files";
 
-const FileSelect = () => {
-  const [selectedItems, setSelectedItems] = useState(Array(10).fill(false));
+const FileSelect = ({ type }) => {
+  const files_list = files[type];
+
+  // Initialize selectedItems with the length of files_list
+  const [selectedItems, setSelectedItems] = useState(
+    Array(files_list.length).fill(false)
+  );
+
+  useEffect(() => {
+    // Update the selectedItems state when files_list changes
+    setSelectedItems(Array(files_list.length).fill(false));
+  }, [files_list]);
 
   const handleToggle = (index) => {
     const newSelectedItems = [...selectedItems];
@@ -36,17 +47,17 @@ const FileSelect = () => {
           </span>
         </summary>
         <ul className="p-4 shadow dropdown-content z-[1] bg-base-100 rounded-box w-full h-[200px] overflow-scroll">
-          {selectedItems.map((isSelected, index) => (
+          {files_list.map((file, index) => (
             <li className="flex w-[400px]" key={index}>
               <div className="form-control">
                 <label className="label cursor-pointer">
                   <input
                     type="checkbox"
-                    checked={isSelected}
+                    checked={selectedItems[index]}
                     className="checkbox checkbox-primary mr-[10px]"
                     onChange={() => handleToggle(index)}
                   />
-                  <span className="label-text">File {index + 1}</span>
+                  <span className="label-text">{file.filename}</span>
                 </label>
               </div>
             </li>

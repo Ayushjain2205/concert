@@ -1,6 +1,6 @@
 import React from "react";
 
-const ImageSimilar = () => {
+const ImageSimilar = ({ type }) => {
   return <div>ImageSimilar</div>;
 };
 

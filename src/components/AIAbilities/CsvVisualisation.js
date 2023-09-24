@@ -4,7 +4,7 @@ import { successToast } from "../../helpers/showToast";
 import Loader from "../UI/Loader";
 import { Web3TokensPerformance } from "../Charts";
 
-const CsvVisualisation = () => {
+const CsvVisualisation = ({ type }) => {
   const [buttonState, setButtonState] = useState("initial");
   const [showWeb3Tokens, setShowWeb3Tokens] = useState(false);
 
@@ -22,7 +22,7 @@ const CsvVisualisation = () => {
         <label className="label">
           <span className="label-text text-[16px]">Select files</span>
         </label>
-        <FileSelect />
+        <FileSelect type={type} />
       </div>
       <div className="form-control mb-[20px]">
         <label className="label">

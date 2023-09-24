@@ -3,7 +3,7 @@ import FileSelect from "../Functional/FileSelect";
 import Loader from "../UI/Loader";
 import { successToast } from "../../helpers/showToast";
 
-const ImagePrompt = () => {
+const ImagePrompt = ({ type }) => {
   const [buttonState, setButtonState] = useState("initial"); // "initial", "generating", "download"
   const [showImage, setShowImage] = useState(false);
 
@@ -21,7 +21,7 @@ const ImagePrompt = () => {
         <label className="label">
           <span className="label-text text-[16px]">Select files</span>
         </label>
-        <FileSelect />
+        <FileSelect type={type} />
       </div>
 
       <div className="form-control w-full ">

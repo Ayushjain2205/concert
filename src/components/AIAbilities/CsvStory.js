@@ -1,6 +1,6 @@
 import React from "react";
 
-const CsvStory = () => {
+const CsvStory = ({ type }) => {
   return <div>CsvStory</div>;
 };
 

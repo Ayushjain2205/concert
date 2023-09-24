@@ -2,7 +2,7 @@ import React from "react";
 import AICard from "../../Cards/AICard";
 import ai_ability_data from "../../../data/ai_ability_data";
 
-const CsvAI = () => {
+const CsvAI = ({ type }) => {
   const cardData = ai_ability_data.filter((card) => card.category === "csv");
 
   return (
@@ -15,6 +15,7 @@ const CsvAI = () => {
           description={card.description}
           component={card.component}
           id={card.id}
+          type={type}
         />
       ))}
     </div>

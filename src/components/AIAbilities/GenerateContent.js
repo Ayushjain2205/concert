@@ -3,7 +3,7 @@ import FileSelect from "../Functional/FileSelect";
 import Loader from "../UI/Loader";
 import { successToast } from "../../helpers/showToast";
 
-const GenerateContent = () => {
+const GenerateContent = ({ type }) => {
   const [category, setCategory] = useState("");
   const [buttonState, setButtonState] = useState("initial"); // "initial", "generating", "download"
 
@@ -21,7 +21,7 @@ const GenerateContent = () => {
         <label className="label">
           <span className="label-text text-[16px]">Select files</span>
         </label>
-        <FileSelect />
+        <FileSelect type={type} />
       </div>
 
       <div className="form-control mt-4">

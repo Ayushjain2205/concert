@@ -1,6 +1,6 @@
 import React from "react";
 
-const FileChat = () => {
+const FileChat = ({ type }) => {
   return <div>FileChat</div>;
 };
 

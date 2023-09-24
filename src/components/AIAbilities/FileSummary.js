@@ -3,7 +3,7 @@ import FileSelect from "../Functional/FileSelect";
 import Loader from "../UI/Loader";
 import { successToast } from "../../helpers/showToast";
 
-const FileSummary = () => {
+const FileSummary = ({ type }) => {
   const [buttonState, setButtonState] = useState("initial"); // "initial", "generating", "download"
 
   const handleGenerateClick = () => {
@@ -20,7 +20,7 @@ const FileSummary = () => {
         <label className="label">
           <span className="label-text text-[16px]">Select files</span>
         </label>
-        <FileSelect />
+        <FileSelect type={type} />
       </div>
 
       {buttonState === "initial" && (
