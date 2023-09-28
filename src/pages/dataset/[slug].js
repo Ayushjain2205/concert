@@ -34,8 +34,9 @@ const TabTrigger = ({ value, label }) => (
 
 const DataSetPage = ({
   dataset: { name, category, description, type, price, users, files, forks },
+  bought,
 }) => {
-  const [isBought, setIsBought] = useState(false);
+  const [isBought, setIsBought] = useState(bought || false);
   const signer = useSigner();
   const address = useAddress();
 
@@ -153,9 +154,13 @@ export async function getServerSideProps(context) {
     };
   }
 
+  // Check for the 'bought' query parameter
+  const bought = context.query.bought === "true";
+
   return {
     props: {
       dataset,
+      bought,
     },
   };
 }

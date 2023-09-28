@@ -1,15 +1,39 @@
 import React, { useState, useEffect } from "react";
 import Loader from "../UI/Loader";
+import abi from "../../abi/RoyalCoin";
+import { useRouter } from "next/router";
+import { ethers } from "ethers";
+import { useSigner, useAddress } from "@thirdweb-dev/react";
+
+const contractAddress = "0xDb499857812569403F0aA1036d453d30945C8751";
 
 const Step4 = () => {
   const [buttonState, setButtonState] = useState(""); // Set the initial state to an empty string
+  const signer = useSigner();
+  const address = useAddress();
+  const router = useRouter();
 
+  // Initialize the contract instance with the signer
+  const contract = new ethers.Contract(contractAddress, abi, signer);
+
+  const createDataset = async () => {
+    let to = address;
+    const amount = ethers.utils.parseUnits("0", 0);
+
+    try {
+      let tx = await contract.mint(to, amount);
+      await tx.wait();
+    } catch (error) {
+      console.log(error);
+    }
+  };
   // Event handler for the button click
   const handleButtonClick = () => {
     setButtonState("confirming");
-
+    createDataset();
     setTimeout(() => {
       setButtonState("");
+      router.push("/dataset/space-imagery:-hubble's-finest?bought=true");
     }, 10000);
   };
 
