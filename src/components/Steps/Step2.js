@@ -21,15 +21,17 @@ const Step2 = () => {
           <span className="label-text text-[16px]">AI actions:</span>
         </label>
         <label className="label cursor-pointer">
-          <span className="label-text text-[20px]">File Summary</span>
+          <span className="label-text text-[20px]">Generate with Prompt</span>
           <input type="checkbox" className="checkbox checkbox-primary" />
         </label>
         <label className="label cursor-pointer">
-          <span className="label-text text-[20px]">Chat with File</span>
+          <span className="label-text text-[20px]">
+            Generate similar images
+          </span>
           <input type="checkbox" className="checkbox checkbox-primary" />
         </label>
         <label className="label cursor-pointer">
-          <span className="label-text text-[20px]">Generate content</span>
+          <span className="label-text text-[20px]">Generate fusion images</span>
           <input type="checkbox" className="checkbox checkbox-primary" />
         </label>
       </div>
