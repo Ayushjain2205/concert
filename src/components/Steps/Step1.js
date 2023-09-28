@@ -17,6 +17,7 @@ const Step1 = () => {
           type="text"
           placeholder="Name"
           className="input input-bordered input-primary focus:outline-none"
+          value="Space Imagery: Hubble's Finest"
         />
       </div>
       <div className="form-control">
@@ -51,6 +52,7 @@ const Step1 = () => {
           type="text"
           placeholder="Category"
           className="input input-bordered input-primary focus:outline-none"
+          value="Astronomy"
         />
       </div>
       <div className="form-control w-2/3 ">
@@ -62,6 +64,7 @@ const Step1 = () => {
         <textarea
           className="textarea textarea-primary focus:outline-none"
           placeholder="Description"
+          value="A mesmerizing dataset featuring some of the best images captured by the Hubble Space Telescope. Dive into the depths of space, explore distant galaxies, nebulae, and star clusters that offer a glimpse of the vastness of our universe."
         ></textarea>
       </div>
       <div className="form-control w-2/3 relative mb-[20px]">
@@ -71,7 +74,7 @@ const Step1 = () => {
         <input
           type="number"
           placeholder="Add Price"
-          value={100}
+          value={180}
           className="input input-bordered input-primary focus:outline-none pl-[40px]"
         />
         <img

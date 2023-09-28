@@ -39,7 +39,7 @@ const ImagePrompt = ({ type }) => {
       {showImage && (
         <div className="flex flex-row justify-center">
           <img
-            src="https://replicate.com/static/home/sdxl.532cebb4a97a.jpg"
+            src="https://i.ibb.co/mHpqzrR/scenery-in-greenland.png"
             className="h-[300px] mt-[30px]"
             alt=""
           />
